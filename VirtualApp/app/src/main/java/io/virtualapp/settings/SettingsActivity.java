@@ -93,6 +93,10 @@ public class SettingsActivity extends Activity {
             Preference fileMange = findPreference(FILE_MANAGE);
             Preference permissionManage = findPreference(PERMISSION_MANAGE);
 
+            // 隐藏赞助、关于、问题反馈
+            getPreferenceScreen().removePreference(donate);
+            getPreferenceScreen().removePreference(faq);
+            getPreferenceScreen().removePreference(about);
 
             SwitchPreference disableInstaller = (SwitchPreference) findPreference(DISABLE_INSTALLER_KEY);
             SwitchPreference enableLauncher = (SwitchPreference) findPreference(ENABLE_LAUNCHER);
